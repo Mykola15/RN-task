@@ -18,7 +18,7 @@ const PostsScreen = ({navigation}) => {
         <ScrollView style={styles.container}>
             {postsArr && postsArr.map((post) => {
                 return (
-                    <TouchableOpacity onPress={() => {
+                    <TouchableOpacity key={post.id} onPress={() => {
                         navigation.navigate('SinglePostScreen', {post: post})
                     }}>
                         <View style={styles.post}>
